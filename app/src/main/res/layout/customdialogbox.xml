@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:orientation="vertical">
+
+         <TextView
+             android:layout_width="300dp"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="30dp"
+              android:text="Enter your Name"
+             android:textColor="@color/green"
+             android:layout_marginLeft="20dp"
+             android:textSize="15sp"/>
+<EditText
+    android:id="@+id/etname2"
+    android:layout_width="500dp"
+    android:layout_height="wrap_content"
+    android:hint="Enter your  Name"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Enter your  Email"
+            android:textColor="@color/green"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"/>
+        <EditText
+            android:id="@+id/etemail2"
+            android:inputType="textEmailAddress"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter your  Email"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Enter your   Number"
+            android:textColor="@color/green"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"/>
+        <EditText
+            android:id="@+id/etphone2"
+            android:inputType="phone"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter your   PhoneNumber"/>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             >
+             <RadioGroup
+                 android:id="@+id/rdgroup"
+
+                 android:layout_width="500dp"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal">
+                 <RadioButton
+                     android:id="@+id/rdmale"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="male"
+                     android:textSize="15sp"
+                     android:textColor="@color/green"
+                     android:layout_marginLeft="40dp"/>
+                 <RadioButton
+                     android:id="@+id/rdfemale"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text=" female"
+                     android:textSize="15sp"
+                     android:textColor="@color/green"
+                     android:layout_marginLeft="40dp"/>
+                 <RadioButton
+                     android:id="@+id/rdothers"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Others"
+                     android:textSize="15sp"
+                     android:textColor="@color/green"
+                     android:layout_marginLeft="40dp"/>
+
+
+             </RadioGroup>
+             <EditText
+                 android:id="@+id/etothers"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:hint="Specify your Charcater"
+                 android:visibility="gone"/>
+
+             <Button
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/btnupdate2"
+                 android:text="update"
+                 android:layout_marginLeft="140dp"
+                 android:layout_marginTop="50dp"/>
+         </LinearLayout>
+
+
+
+</LinearLayout>
+</layout>
