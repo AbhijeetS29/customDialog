@@ -4,6 +4,7 @@ import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.WindowManager
 import android.widget.Toast
 import com.abhijeet.datashowing.databinding.ActivityMain2Binding
 import com.abhijeet.datashowing.databinding.ActivityMainBinding
@@ -20,12 +21,24 @@ class MainActivity2 : AppCompatActivity() {
             var dialogBinding=CustomdialogboxBinding.inflate(layoutInflater)
             var dialog=Dialog(this)
             dialog.setContentView(dialogBinding.root)
-            dialog.window?.setLayout( 720, 1280)
+            dialog.window?.setLayout( WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.WRAP_CONTENT)
             dialogBinding.etname2.setText(binding.tvname.text.toString())
             dialogBinding.etemail2.setText(binding.tvEmail.text.toString())
             dialogBinding.etphone2.setText(binding.tvphonenumber.text.toString())
+            if(binding.tvGender.text.toString().equals(dialogBinding.rdmale.text.toString())){
+                dialogBinding.rdmale.isChecked=true
+            }
+            else if(binding.tvGender.text.toString().equals(dialogBinding.rdfemale.text.toString())){
+                dialogBinding.rdfemale.isChecked=true
+            }
+            else if(binding.tvGender.text.toString().equals(dialogBinding.rdothers.text.toString()))
+            {
+                dialogBinding.rdothers.isChecked=true
+                dialogBinding.etothers.visibility=View.VISIBLE
+                dialogBinding.etothers.setText(binding.tvvariety.text.toString())
+            }
 
-            
+
 
 
             dialogBinding.rdgroup.setOnCheckedChangeListener { radioGroup, id ->
