@@ -87,6 +87,10 @@ class MainActivity2 : AppCompatActivity() {
                     binding.tvvariety.setText((dialogBinding.etothers.text.toString()))
                     dialog.dismiss()
                 }
+                dialogBinding.selectcalender.setOnClickListener {
+                    dialogBinding.datepicker.visibility=View.VISIBLE
+//                    dialogBinding.enterdate.setText(dialogBinding.datepicker.dayOfMonth.toString(),dialogBinding.datepicker.month.toString(),dialogBinding.datepicker.year.toString())
+                }
 
             }
             dialog.show()
